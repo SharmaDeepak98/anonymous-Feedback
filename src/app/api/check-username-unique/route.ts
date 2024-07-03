@@ -29,7 +29,6 @@ export async function GET(request: Request) {
       );
     }
 
-    console.log(result); //TODO remove
     const { username } = result.data;
     const existingVerifiedUser = await UserModel.findOne({
       username,
