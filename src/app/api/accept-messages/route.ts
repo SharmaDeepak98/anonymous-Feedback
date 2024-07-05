@@ -55,10 +55,10 @@ export async function GET(request: Request) {
   }
 
   try {
-    const foundUser = await UserModel.findById(user.id);
+    const foundUser = await UserModel.findById(user._id);
 
     if (!foundUser) {
-      return simpleResponse(false, "user not found", 400);
+      return simpleResponse(false, "user not found accept-message", 400);
     }
     return Response.json(
       {

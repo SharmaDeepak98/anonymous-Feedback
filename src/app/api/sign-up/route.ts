@@ -5,12 +5,12 @@ import dbConnect from "@/lib/dbConnect";
 import simpleResponse from "@/lib/simpleResponse";
 
 export async function POST(request: Request) {
-  console.log("run");
   await dbConnect();
 
   try {
     const { username, email, password } = await request.json();
 
+    console.log(username, email, password);
     const existingUserVerifiedByUsername = await UserModel.findOne({
       username,
       isVerified: true,
@@ -47,14 +47,14 @@ export async function POST(request: Request) {
       });
       await newUser.save();
 
-      return simpleResponse(true, "successfully added user in database", 409);
+      //send verificaion email
+      const emailResponse = await SendVerificationEmail(
+        email,
+        username,
+        verifyCode
+      );
+      return simpleResponse(true, "successfully added user in database", 200);
     }
-
-    //send verificaion email
-
-    const emailResponse = SendVerificationEmail(email, username, verifyCode);
-
-    console.log(emailResponse);
   } catch (err) {
     return simpleResponse(false, "error registering accounting", 500);
   }
