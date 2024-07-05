@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+# Screenshots
+![screenshot](https://github.com/SharmaDeepak98/anonymous-Feedback/blob/ac79912815692121057a3db8897471992b26fbe0/screenshot/Untitled%20design.png)
+
 ## Getting Started
 
 First, run the development server:
@@ -39,3 +42,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 # anonymous-Feedback
 A web app which allows to send feedbacks to users anonymously.
 >>>>>>> 458a660f860bab86ba2a3dab43b62a0a0b8d2f0f
+
+
