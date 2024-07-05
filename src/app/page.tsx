@@ -29,20 +29,24 @@ export default function Home() {
           {/* Carousel for Messages */}
           <Carousel
             plugins={[Autoplay({ delay: 2000 })]}
-            className="w-full max-w-lg md:max-w-xl"
+            className="w-full max-w-3xl"
           >
-            <CarouselContent>
+            <CarouselContent className="space-y-4">
               {messages.map((message, index) => (
-                <CarouselItem key={index} className="p-4 ">
+                <CarouselItem key={index} className="p-4">
                   <Card className="w-full md:w-96 lg:w-112 xl:w-128">
                     <CardHeader>
-                      <CardTitle>{message.title}</CardTitle>
+                      <CardTitle className="text-xl md:text-2xl lg:text-3xl">
+                        {message.title}
+                      </CardTitle>
                     </CardHeader>
-                    <CardContent className="flex flex-col md:flex-row items-start space-y-2 md:space-y-0 md:space-x-4 ">
-                      <Mail className="flex-shrink-0" />
+                    <CardContent className="flex flex-col md:flex-row items-start space-y-2 md:space-y-0 md:space-x-4">
+                      <Mail className="flex-shrink-0 w-6 h-6 md:w-8 md:h-8" />
                       <div>
-                        <p>{message.content}</p>
-                        <p className="text-xs text-muted-foreground">
+                        <p className="text-base md:text-lg lg:text-xl">
+                          {message.content}
+                        </p>
+                        <p className="text-xs md:text-sm lg:text-base text-muted-foreground">
                           {message.received}
                         </p>
                       </div>
@@ -54,9 +58,10 @@ export default function Home() {
           </Carousel>
         </main>
       </div>
+
       {/* Footer */}
       <footer className="text-center p-4 md:p-6 bg-gray-900 text-white">
-        © 2023 True Feedback. All rights reserved.
+        © 2024 Anonymous Feedback. All rights reserved.
       </footer>
     </>
   );
