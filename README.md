@@ -2,7 +2,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 # Screenshots
-![screenshot](https://github.com/SharmaDeepak98/anonymous-Feedback/blob/ac79912815692121057a3db8897471992b26fbe0/screenshot/Untitled%20design.png)
+![screenshot](https://github.com/SharmaDeepak98/anonymous-Feedback/blob/main/screenshot/Screenshot.png?raw=true)
 
 ## Getting Started
 
